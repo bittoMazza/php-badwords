@@ -1,5 +1,6 @@
 <?php
-    $prova = 'Con il riso mi piace la ciccia ciccia ciccia';
+    $paragraph = 'Con il riso mi piace la ciccia ciccia ciccia';
+
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +17,19 @@
     </h1>
     <h3>
         <?php
-            echo $prova;
+            echo $paragraph;
         ?>
     </h3>
     <h3>
-        La frase è lunga <?php echo strlen($prova); ?> caratteri
+        La frase è lunga <?php echo strlen($paragraph); ?> caratteri
+    </h3>
+    <h3>
+        La frase senza la parola proibita è :
+        <?php
+            // Creiamo una nuova variabile per la nuova frase, in cui la parola presa dall'url con GET verrà sostituita con ***
+           $new_paragraph = str_replace($_GET['bad_word'],'***', $paragraph);
+           echo $new_paragraph;
+        ?> 
     </h3>
 </body>
 </html>
