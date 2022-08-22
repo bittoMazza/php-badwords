@@ -32,7 +32,14 @@
             // Creiamo una nuova variabile per la nuova frase, in cui la parola presa dall'url con GET verrà sostituita con ***
             $new_paragraph = str_replace($_GET['bad_word'],'***', $paragraph);
             echo $new_paragraph;
-            ?> 
+            ?>
+        </h3>
+        <h3>
+            La frase senza la parola proibita è lunga :
+            <?php
+               echo strlen($new_paragraph); 
+            ?>
+            caratteri
         </h3>
     </div>   
 </body>
