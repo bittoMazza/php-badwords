@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(222, 204, 178);
+}
+
+h1{
+    padding: 30px 0;
+    text-align: center;
+    color: brown;
+}
+
+.content{
+    width: 1000px;
+    margin: 0 auto;
+}
